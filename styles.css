@@ -13,6 +13,7 @@ html {
     box-sizing: border-box;
     font-size: var(--font-size);
     font-family: var(--font-family);
+    font-weight: 600;
 }
 
 *, 
@@ -27,5 +28,81 @@ body {
 }
 
 main {
-    min-width: 100vh;
+    min-height: 100vh;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.title {
+    color: var(--dark-grayish-blue);
+    font-size: 1.9rem;
+}
+
+.switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-switch {
+    margin: 0 1rem;
+    color: var(--grayish-blue);
+    font-size: .8rem;
+}
+
+.label {
+    display: flex;
+
+    /* Rounded border */
+    border-radius: 9999px;
+
+    /* Size */
+    height: 25px;
+    width: 40px;
+}
+
+.label:not(:checked) {
+    /* OFF status */
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.label:checked {
+    
+    background-color: #357edd;
+    border: 1px solid #357edd;
+    /* Push the circle to the right */
+    justify-content: flex-end;
+}
+
+.label__input {
+    /* Hide the input */
+    display: none;
+}
+
+.label__circle {
+    /*Roundedborder*/
+    border-radius: 9999px;
+    
+    /*Size*/
+    width: 23px;
+    background-color: #fff;
+    
+    /*OFFstatus*/
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 9999px;
+    -moz-border-radius: 9999px;
+    -ms-border-radius: 9999px;
+    -o-border-radius: 9999px;
+}
+
+.column {
+    margin-top: 2rem;
+    border: 1px solid red;
+    padding: 2rem;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
