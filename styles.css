@@ -25,13 +25,13 @@ html {
 body {
     margin: 0;
     overflow-x: hidden;
+    background-color: var(--very-light-grayish-blue);
 }
 
 main {
-    min-height: 100vh;
+    width: 90%;
+    margin: 3rem auto;
     text-align: center;
-    padding: 1.5rem;
-    background-color: var(--very-light-grayish-blue);
 }
 
 .title {
@@ -49,7 +49,7 @@ main {
 
 .text-switch {
     margin: 0 1rem;
-    color: var(--grayish-blue);
+    color: var(--light-grayish-blue);
     font-size: .8rem;
 }
 
@@ -190,4 +190,72 @@ main {
 .btn-selected {
     color: rgba(105,111,221,1);
     background: #FFF;
+}
+
+/* Mediaqueries */
+
+@media (min-width: 576px){
+    main {
+        width: 70%;
+    }
+}
+
+@media (min-width: 768px){
+    main {
+        width: 60%;
+    }
+}
+
+@media (min-width: 992px){
+    main {
+        width: 90%;
+        margin-top: 4.5rem;
+    }
+
+    .text-switch {
+        font-size: 1rem;
+    }
+
+    .container-column {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .column:nth-of-type(2) {
+        padding: 2.5rem 2.5rem;
+        padding-bottom: 3.5rem;
+        margin-top: .5rem;
+        z-index: 1;
+    }
+
+    .column:nth-of-type(1){
+        margin-right: -.5rem;
+    }
+
+    .column:nth-of-type(3){
+        margin-left: -.5rem;
+        z-index: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1440px) {
+    main {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1920px) {
+    main {
+        width: 60%;
+    }
 }
